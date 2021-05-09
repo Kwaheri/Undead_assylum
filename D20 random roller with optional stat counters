@@ -1,0 +1,109 @@
+import numpy as np
+import random as rnd
+import matplotlib.pyplot as plt
+
+
+
+# Sets up a counter for each specific possible roll number
+counter1 = 0
+counter2 = 0
+counter3 = 0
+counter4 = 0
+counter5 = 0
+counter6 = 0
+counter7 = 0
+counter8 = 0
+counter9 = 0
+counter10 = 0
+counter11 = 0
+counter12 = 0
+counter13 = 0
+counter14 = 0
+counter15 = 0
+counter16 = 0
+counter17 = 0
+counter18 = 0
+counter19 = 0
+counter20 = 0
+
+compList = [] #creates a space for a compiled list of rolls 
+
+# tells how to compile the data for each number rolled
+for i in  range(100): 
+    roll = rnd.randint(1, 20) #This line is really the only line you need to actually "roll the dice" then add a "print(roll)" and you have the number showing on the die
+    if roll == 1 in compList: 
+        counter1 += 1
+    if roll == 2 in compList:
+        counter2 += 1 
+    if roll == 3 in compList:
+        counter3 += 1
+    if roll == 4 in compList:
+        counter4 += 1
+    if roll == 5 in compList:
+        counter5 += 1
+    if roll == 6 in compList:
+        counter6 += 1
+    if roll == 7 in compList:
+        counter7 += 1
+    if roll == 8 in compList:
+        counter8 += 1
+    if roll == 9 in compList:
+        counter9 += 1
+    if roll == 10 in compList:
+        counter10 += 1
+    if roll == 11 in compList:
+        counter11 += 1
+    if roll == 12 in compList:
+        counter12 += 1
+    if roll == 13 in compList:
+        counter13 += 1
+    if roll == 14 in compList:
+        counter14 += 1
+    if roll == 15 in compList:
+        counter15 += 1
+    if roll == 16 in compList:
+        counter16 += 1
+    if roll == 17 in compList:
+        counter17 += 1
+    if roll == 18 in compList:
+        counter18 += 1
+    if roll == 19 in compList:
+        counter19 += 1
+    if roll == 20 in compList:
+        counter20 += 1    
+    compList.append(roll)  
+
+# prints the number of times each number is rolled
+print('repititions1:', counter1)
+print('repititions2:', counter2)
+print('repititions3:', counter3)
+print('repititions4:', counter4)
+print('repititions5:', counter5)
+print('repititions6:', counter6)
+print('repititions7:', counter7)
+print('repititions8:', counter8)
+print('repititions9:', counter9)
+print('repititions10:', counter10)
+print('repititions11:', counter11)
+print('repititions12:', counter12)
+print('repititions13:', counter13)
+print('repititions14:', counter14)
+print('repititions15:', counter15)
+print('repititions16:', counter16)
+print('repititions17:', counter17)
+print('repititions18:', counter18)
+print('repititions19:', counter19)
+print('repititions20:', counter20)
+
+
+# turns the numbers rolled (rolls) and the times each number was rolled (counters) into arrays so they can be easily plotted with matplotlib.
+counters = np.array([counter1, counter2, counter3, counter4, counter5, counter6, counter7, counter8, counter9, counter10, counter11, counter12, counter13, counter14, counter15, counter16, counter17, counter18, counter19, counter20])
+rolls = np.array([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20])
+
+# Sets the numbers rolled on the x-axis and the times each number was rolled on the y axis
+x = [rolls]
+y = [counters]
+
+#Plots and shows the graph
+plt.plot(x, y, color='green', linestyle = 'dashed', linewidth = 3, marker = 'o', markerfacecolor = 'blue', markersize = 12)
+plt.show()
